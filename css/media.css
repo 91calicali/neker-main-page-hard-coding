@@ -1,0 +1,143 @@
+@media (max-width:768px) {
+    .pc { display: none; }
+    .mobile { display: block; }
+
+    body { min-width: 100%; }
+    .container { width: 100%; border-left: none; border-right: none; }
+    footer { margin-top: -0.5px; }
+
+    #hd-container { 
+        display: none;
+    }
+
+    #m-hd-container {
+        display: block;
+    }
+
+    /* 세일 배너 */
+    #sale-banner-container > #sale-banner-swiper > .swiper-button-prev, 
+    #sale-banner-container > #sale-banner-swiper > .swiper-button-next {
+        display: none;
+    }
+
+    #sale-banner-container > #sale-banner-swiper > .fraction-pagination {
+        top: 25px;
+        right: 20px;
+    }
+
+    #sale-banner-container > #sale-banner-swiper .slide-add-text {
+        bottom: 5%;
+        font-size: 24px;
+    }
+
+    /* 룩북 */
+    #lookbook-container > #lookbook-product a:nth-child(1) {
+        width: 100%;
+        border-right: none;
+    }
+
+    /* 모든 상품 */
+    #all-products-container > #a-product-wrap .a-product {
+        width: calc(50% - 0.5px);
+    }
+
+    #all-products-container > #a-product-wrap .a-product .a-product-np .a-product-n,
+    #all-products-container > #a-product-wrap .a-product .a-product-np .a-product-p {
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 13px;
+    }
+
+    #all-products-container > #a-product-wrap .a-product:nth-child(2n) {
+        border-right: none;
+    }
+
+    #all-products-container > #a-product-wrap .a-product .a-product-image {
+        height: 50vw;
+    }
+
+    /* 더보기, 푸터 */
+    #product-more-container,
+    #ft-container {
+        display: none;
+    }
+
+    #m-ft-container {
+        display: block;
+    }
+}
+
+@media (min-width:768px) {
+    .pc { display: block; }
+    .mobile { display: none; }
+
+    body { min-width: 1280px; }
+    .container { width: 1280px; border-left: 1px solid black; border-right: 1px solid black; }
+    footer { margin-top: -4.5px; }
+
+    #hd-container { 
+        display: flex;
+    }
+
+    #m-hd-container {
+        display: none;
+    }
+
+    /* 세일 배너 */
+    #sale-banner-container > #sale-banner-swiper > .swiper-button-prev, 
+    #sale-banner-container > #sale-banner-swiper > .swiper-button-next {
+        display: flex;
+    }
+
+    #sale-banner-container > #sale-banner-swiper > .fraction-pagination {
+        bottom: 55px;
+        right: 40px;
+    }
+
+    #sale-banner-container > #sale-banner-swiper  {
+        bottom: 10%;
+        font-size: 28px;
+    }
+
+    /* 룩북 */
+    #lookbook-container > #lookbook-product a:nth-child(1) {
+        width: 50%;
+        border-right: 1px solid black;
+    }
+
+    /* 모든 상품 */
+    #all-products-container > #a-product-wrap .a-product {
+        width: calc(25% - 0.6px);
+    }
+
+    #all-products-container > #a-product-wrap .a-product .a-product-np .a-product-n,
+    #all-products-container > #a-product-wrap .a-product .a-product-np .a-product-p {
+        left: 5%;
+        width: auto;
+        text-align: left;
+        font-size: 18px;
+    }
+
+    #all-products-container > #a-product-wrap .a-product:nth-child(2n) {
+        border-right: 1px solid black;
+    }
+
+    #all-products-container > #a-product-wrap .a-product:nth-child(4n) {
+        border-right: none;
+    }
+
+    #all-products-container > #a-product-wrap .a-product .a-product-image {
+        height: 320px;
+    }
+
+    /* 더보기, 푸터 */
+    #product-more-container,
+    #ft-container {
+        display: flex;
+    }
+
+    #m-ft-container {
+        display: none;
+    }
+}
