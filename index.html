@@ -12,93 +12,27 @@
     <link rel="stylesheet" href="css/swiper-bundle.css">
     <script src="js/swiper-bundle.js"></script>
     <script src="js/tmpdata.js"></script>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/common.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
     <title>네케르  ㅣ Neker</title>
 </head>
 <body>
-    <!-- Mobile 메뉴 -->
-    <aside id="m-listmenu">
-        <div id="m-listmenu-top">
-            <div id="m-listmenu-top-logo">
-                <img src="resource/image/logo_neker.png" class="width-100 height-100" alt="Neker">
-            </div>
-
-            <div id="m-x-button" onclick="mobileMenu(false)">
-                <div id="line1" class="width-100">
-                    <img src="resource/image/close_menu_line.png" class="width-100" alt="X Button">
-                </div>
-                <div id="line2" class="width-100">
-                    <img src="resource/image/close_menu_line.png" class="width-100" alt="X Button">
-                </div>
-            </div>
-
-            <ul id="m-account-list">
-                <li>
-                    <a href="#">Log in</a>
-                </li>
-                <li>
-                    <a href="#">Sign in</a>
-                </li>
-            </ul>
-        </div>
-
-        <div id="m-listmenu-bottom">
-            <ul id="m-listmenu-category">
-                <li>
-                    <a href="#">All products</a>
-                </li>
-                <li>
-                    <a href="#">Lip</a>
-                </li>
-                <li>
-                    <a href="#">Cheek / Base</a>
-                </li>
-                <li>
-                    <a href="#">Eye</a>
-                </li>
-                <li>
-                    <a href="#">Cleansing</a>
-                </li>
-                <li>
-                    <a href="#">Tools</a>
-                </li>
-                <li>
-                    <a href="#">Skincard</a>
-                </li>
-                <li>
-                    <a href="#">Event</a>
-                </li>
-            </ul>
-
-            <ul id="m-community-list">
-                <li>
-                    <a href="#">Notice</a>
-                </li>
-                <li>
-                    <a href="#">Q&A</a>
-                </li>
-            </ul>
-        </div>
-    </aside>
-
     <!-- 헤더 -->
-    <header class="width-100">
+    <header id="hd" class="width-100">
         <!-- PC -->
-        <div id="hd-container" class="container">
+        <div class="hd-container container flex relative">
             <!-- 네케르 로고 -->
-            <div id="hd-logo">
+            <div class="hd-logo flex">
                 <a href="#">
                     <img src="resource/image/logo_neker.png" alt="Neker">
                 </a>
             </div>
     
             <!-- 카테고리 메뉴 -->
-            <nav>
-                <ul id="category-menu">
+            <nav class="hd-nav">
+                <ul class="category-menu flex">
                     <li><a href="#">All products</a></li>
                     <li><a href="#">Lip</a></li>
                     <li><a href="#">Cheek / Base</a></li>
@@ -111,58 +45,58 @@
             </nav>
     
             <!-- 계정 관련 -->
-            <div id="account-menu">
-                <span id="account-login">
+            <div class="account-menu flex">
+                <span class="account-login">
                     login   
                 </span>
     
-                <span id="account-singin">
+                <span class="account-singin">
                     sign in
                 </span>
     
-                <span id="account-myorder">
+                <span class="account-myorder">
                     my order
                 </span>
             </div>
 
             <!-- 장바구니 -->
-            <div id="my-basket">
+            <div class="my-basket flex">
                 <a href="#">
                     <img src="resource/image/p_top_cart.png" alt="Basket">
                 </a>
 
-                <span id="my-basket-count">0</span>
+                <span class="my-basket-count absolute">0</span>
             </div>
         </div>
 
         <!-- Mobile -->
-        <div id="m-hd-container">
-            <div id="m-hd-top">
+        <div class="m-hd-container relative width-100">
+            <div class="m-hd-top relative width-100">
                 <!-- 네케르 로고 -->
-                <div id="m-hd-logo">
+                <div class="m-hd-logo absolute">
                     <a href="#">
                         <img src="resource/image/logo_neker.png" class="width-100 height-100" alt="Neker">
                     </a>
                 </div>
 
                 <!-- 장바구니 -->
-                <div id="m-hd-my-basket">
+                <div class="m-hd-my-basket">
                     <a href="#">
-                        <img src="resource/image/p_top_cart.png" alt="Basket">
+                        <img src="resource/image/p_top_cart.png" class="absolute" alt="Basket">
                     </a>
 
-                    <span id="m-hd-my-basket-count">0</span>
+                    <span class="m-hd-my-basket-count absolute">0</span>
                 </div>
 
                 <!-- 메뉴 버튼 -->
-                <div id="m-hd-listmenu-button" onclick="mobileMenu(true)">
+                <div class="m-hd-menu-button absolute" onclick="mobileMenu(true)">
                     <img src="resource/image/icon_cate2.png" class="width-100 height-100" alt="Menu">
                 </div>
             </div>
 
-            <div id="m-hd-bottom">
-                <nav class="width-100">
-                    <ul id="m-category-menu-swiper" class="swiper">
+            <div class="m-hd-bottom flex relative width-100">
+                <nav class="m-hd-nav width-100">
+                    <ul class="m-category-menu-swiper swiper">
                         <div class="swiper-wrapper">
                             <li class="swiper-slide">
                                 <a href="#">All products</a>
@@ -191,10 +125,76 @@
             </div>
         </div>
     </header>
+
+    <!-- Mobile 메뉴 -->
+    <aside class="m-menu-container">
+        <div class="m-menu-top relative width-100">
+            <div class="m-menu-top-logo absolute">
+                <img src="resource/image/logo_neker.png" class="width-100 height-100" alt="Neker">
+            </div>
+
+            <div class="m-x-button absolute" onclick="mobileMenu(false)">
+                <div class="line1 absolute width-100">
+                    <img src="resource/image/close_menu_line.png" class="width-100" alt="X Button">
+                </div>
+                <div class="line2 absolute width-100">
+                    <img src="resource/image/close_menu_line.png" class="width-100" alt="X Button">
+                </div>
+            </div>
+
+            <ul class="m-account-list flex absolute">
+                <li>
+                    <a href="#">Log in</a>
+                </li>
+                <li>
+                    <a href="#">Sign in</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="m-menu-bottom relative width-100">
+            <ul class="m-menu-category relative width">
+                <li>
+                    <a href="#">All products</a>
+                </li>
+                <li>
+                    <a href="#">Lip</a>
+                </li>
+                <li>
+                    <a href="#">Cheek / Base</a>
+                </li>
+                <li>
+                    <a href="#">Eye</a>
+                </li>
+                <li>
+                    <a href="#">Cleansing</a>
+                </li>
+                <li>
+                    <a href="#">Tools</a>
+                </li>
+                <li>
+                    <a href="#">Skincard</a>
+                </li>
+                <li>
+                    <a href="#">Event</a>
+                </li>
+            </ul>
+
+            <ul class="m-community-list flex relative">
+                <li>
+                    <a href="#">Notice</a>
+                </li>
+                <li>
+                    <a href="#">Q&A</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
     <!-- 세일 배너 -->
     <section id="sale-banner-container" class="container">
         <!-- Swiper -->
-        <div id="sale-banner-swiper" class="swiper">
+        <div class="sale-banner-swiper swiper">
             <div class="swiper-wrapper">
                 <a href="#" class="swiper-slide">
                     <img src="resource/image/sale_banner1.png" class="width-100 pc" alt="Veilayer Cheek 6 Colors Sale Banner">
@@ -207,13 +207,13 @@
                 </a>
               
                 <a href="#" class="swiper-slide">
-                    <span class="slide-add-text">Prismatic Color Eyes<br>20% OFF</span>
+                    <span class="slide-add-text absolute">Prismatic Color Eyes<br>20% OFF</span>
                     <img src="resource/image/sale_banner3.png" class="width-100 pc" alt="Prismatic Color Eyes Sale Banner">
                     <img src="resource/image/sale_banner3_mo.png" class="width-100 mobile" alt="Prismatic Color Eyes Sale Banner">
                 </a>
                 
                 <a href="#" class="swiper-slide">
-                    <span class="slide-add-text">네케르 제품 구매시<br>매트립 100원</span>
+                    <span class="slide-add-text absolute">네케르 제품 구매시<br>매트립 100원</span>
                     <img src="resource/image/sale_banner4.png" class="width-100 pc" alt="Matte Lip Sale Banner">
                     <img src="resource/image/sale_banner4_mo.png" class="width-100 mobile" alt="Matte Lip Sale Banner">
                 </a>
@@ -225,16 +225,17 @@
             <div class="swiper-pagination progress-pagination"></div>
         </div>     
     </section>
+
     <!-- 룩북 -->
     <section id="lookbook-container" class="container">
         <!-- 타이틀 -->
-        <div id="lookbook-title" class="section-title">
+        <div class="lookbook-title section-title">
             <img src="resource/image/title_icon.png" class="title-icon" alt="title">
-            <img src="resource/image/title_lookbook.png" id="lookbook-title-image" alt="lookbook">
+            <img src="resource/image/title_lookbook.png" class="lookbook-title-image" alt="lookbook">
         </div>
 
         <!-- 상품 -->
-        <div id="lookbook-product">
+        <div class="lookbook-product flex">
             <a href="#">
                 <img src="resource/image/lookbook banner1.png" class="width-100 height-100 pc" alt="lookbook pc banner1">
                 <img src="resource/image/lookbook banner1_mo.png" class="width-100 height-100 mobile" alt="lookbook mobile banner1">
@@ -245,33 +246,37 @@
             </a>
         </div>
     </section>
+
     <!-- 모든 상품 -->
     <section id="all-products-container" class="container">
         <!-- 타이틀 -->
-        <div id="all-products-title" class="section-title">
+        <div class="all-products-title section-title">
             <img src="resource/image/title_icon.png" class="title-icon" alt="title">
-            <img src="resource/image/title_allproducts.png" id="all-products-image" alt="all products">
+            <img src="resource/image/title_allproducts.png" class="all-products-image" alt="all products">
         </div>
 
         <!-- 상품 -->
         <!-- allProductSet 함수로 세팅 -->
-        <div id="a-product-wrap"></div> 
+        <div class="a-product-wrap flex"></div> 
     </section>
+
     <!-- more -->
-    <section id="product-more-container" class="container">
-        <a href="#" id="more-button">
+    <section id="product-more-container" class="container flex">
+        <a href="#" class="more-button">
             <img src="resource/image/btn_more.png" class="width-100 height-100" alt="Product More">
         </a>
     </section>
+
     <!-- 브랜딩 -->
     <section id="branding-container" class="container pc">
         <img src="resource/image/pc_banner.jpg" class="width-100 height-100" alt="Neker Branding">
     </section>
+
     <!-- 푸터 -->
-    <footer class="width-100">
-        <div id="ft-container" class="container">
-            <div id="ft-left" class="height-100">
-                <img src="resource/image/logo_neker.png" id="ft-logo" alt="Neker">
+    <footer id="ft" class="width-100">
+        <div class="ft-container container flex">
+            <div class="ft-left height-100">
+                <img src="resource/image/logo_neker.png" class="ft-logo" alt="Neker">
 
                 <p>
                     주식회사 아미코스메틱ㅣ서울특별시 강남구 언주로149길 17 (논현동) 3층 (논현동)
@@ -286,7 +291,7 @@
                 </p>
             </div>
 
-            <div id="ft-center" class="height-100">
+            <div class="ft-center height-100">
                 <p>02-6956-6556</p>
                 <p>
                     10:00 - 17:00
@@ -297,8 +302,8 @@
                 </p>
             </div>
 
-            <div id="ft-right" class="height-100">
-                <div id="ft-right-list1">
+            <div class="ft-right height-100">
+                <div class="ft-right-list1">
                     <h5>HELP</h5>
                     <ul>
                         <li>
@@ -310,7 +315,7 @@
                     </ul>
                 </div>
                 
-                <div id="ft-right-list2">
+                <div class="ft-right-list2">
                     <h5>ABOUT</h5>
                     <ul>
                         <li>
@@ -322,14 +327,14 @@
                     </ul>
                 </div>
 
-                <div id="ft-right-sns">
+                <div class="ft-right-sns">
                     <ul>
-                        <li id="ft-facebook-icon">
+                        <li class="ft-facebook-icon sns-icon">
                             <a href="#">
                                 <img src="resource/image/icon_facebook.png" class="width-100 height-100" alt="facebook">
                             </a>
                         </li>
-                        <li id="ft-instargram-icon">
+                        <li class="ft-instargram-icon sns-icon">
                             <a href="#">
                                 <img src="resource/image/icon_Instargram.png" class="width-100 height-100" alt="instargram">
                             </a>
@@ -339,7 +344,7 @@
             </div>
         </div>
 
-        <div id="m-ft-container" class="width-100">
+        <div class="m-ft-container relative width-100">
             <p>1:1문의</p>
             <p>
                 고객센터
@@ -368,18 +373,18 @@
             </p>
             
             <span>
-                <a href="#" id="agreement">이용약관</a>
-                <a href="#" id="policy">개인정보 처리방침</a>
+                <a href="#" class="agreement">이용약관</a>
+                <a href="#" class="policy">개인정보 처리방침</a>
             </span>
 
-            <div id="m-ft-sns">
+            <div class="m-ft-sns absolute">
                 <ul>
-                    <li id="facebook-icon">
+                    <li class="facebook-icon">
                         <a href="#">
                             <img src="resource/image/icon_facebook.png" class="width-100 height-100" alt="facebook">
                         </a>
                     </li>
-                    <li id="instargram-icon">
+                    <li class="instargram-icon">
                         <a href="#">
                             <img src="resource/image/icon_Instargram.png" class="width-100 height-100" alt="instargram">
                         </a>
@@ -398,11 +403,11 @@
         // all product set.
         function allProductSet() {
             Object.keys(pds).forEach((i) => {
-                let apw = document.querySelector("#a-product-wrap");
+                let apw = document.querySelector(".a-product-wrap");
                 let ah;
     
                 ah = `
-                        <div id="a-product-${i}" class="a-product">
+                        <div class="a-product-${i} a-product">
                             <div class="a-product-image width-100">
                                 <a href="${pds[i].href}">
                                     <img src="${pds[i].img}" class="width-100 height-100" alt="${pds[i].name}">
@@ -412,7 +417,7 @@
                 // 품절 상품이라면 품절 이미지 추가.
                 if(`${pds[i].soldout}` == 1) {
                     ah += `
-                            <div id="a-product-soldout-${i}" class="a-product-soldout">
+                            <div class="a-product-soldout-${i} a-product-soldout">
                                 <img src="resource/image/soldout.gif" class="width-100 height-100">
                             </div>
                           `;
@@ -434,32 +439,32 @@
         }
     
         // swiper.
-        let mainSwiper = new Swiper("#sale-banner-swiper", {
+        let mainSwiper = new Swiper(".sale-banner-swiper", {
             loop: false,
             observer : true,
             observeParents : true,
             spaceBetween: 0,
             pagination: {
-                el: "#sale-banner-swiper .fraction-pagination",
+                el: ".sale-banner-swiper .fraction-pagination",
                 type: "fraction",
             },
             navigation: {
-                nextEl: "#sale-banner-swiper .swiper-button-next",
-                prevEl: "#sale-banner-swiper .swiper-button-prev",
+                nextEl: ".sale-banner-swiper .swiper-button-next",
+                prevEl: ".sale-banner-swiper .swiper-button-prev",
             },
             speed: 1000
         });
     
-        let progressSwiper = new Swiper("#sale-banner-swiper", {
+        let progressSwiper = new Swiper(".sale-banner-swiper", {
         pagination: {
-            el: "#sale-banner-swiper .progress-pagination",
+            el: ".sale-banner-swiper .progress-pagination",
             type: "progressbar",
             }
         });
     
         mainSwiper.controller.control = progressSwiper;
     
-        new Swiper("#m-category-menu-swiper", {
+        new Swiper(".m-category-menu-swiper", {
             slidesPerView: "auto",
             loopAdditionalSlides: 1,
             observer : true,
@@ -481,12 +486,12 @@
     
             if(wiw <= 768) {
                 if(sy < 60) {
-                    $("#m-hd-top").css({
+                    $(".m-hd-top").css({
                         "position": "relative",
                         "background-color": "white"
                     });
                 } else if(sy > 60) {
-                    $("#m-hd-top").css({
+                    $(".m-hd-top").css({
                         "position": "fixed",
                         "background-color": "rgba( 255, 255, 255, 0.95)"
                     });
@@ -501,15 +506,15 @@
                     "overflow": "hidden"
                 });
     
-                $("#m-listmenu").css({
+                $(".m-menu-container").css({
                     "display": "block"
                 });
     
-                $("#m-listmenu").animate({
+                $(".m-menu-container").animate({
                     left: "0%"
                 }, 500);
             } else if(b == false) {
-                $("#m-listmenu").animate({
+                $(".m-menu-container").animate({
                     left: "100%"
                 }, 500);
                 
@@ -518,7 +523,7 @@
                         "overflow": "visible"
                     });
     
-                    $("#m-listmenu").css({
+                    $(".m-menu-container").css({
                         "display": "none"
                     });   
                 }, 500);                    
