@@ -585,7 +585,7 @@ footer {
   }
   /* all products */
   #all-products-container .a-product-wrap .a-product {
-    width: calc(50% - 0.5px);
+    width: 50%;
   }
   #all-products-container .a-product-wrap .a-product:nth-child(2n) {
     border-right: none;
@@ -609,7 +609,7 @@ footer {
     display: block;
   }
 }
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   body {
     min-width: 1280px;
   }
