@@ -124,7 +124,7 @@
     #all-products-container {
         .a-product-wrap {
             .a-product {
-                width: calc(25% - 0.6px);
+                width: 25%;
                 &:nth-child(2n) {
                     border-right: 1px solid #000;
                 }

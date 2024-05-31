@@ -19,6 +19,10 @@ footer {
   border-top: 1px solid #000;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .width-100 {
   width: 100%;
 }
@@ -367,7 +371,7 @@ footer {
   flex-wrap: wrap;
 }
 #all-products-container .a-product-wrap .a-product {
-  width: calc(25% - 0.8px);
+  width: 25%;
   border-right: 1px solid #000;
   border-bottom: 1px solid #000;
 }
@@ -649,7 +653,7 @@ footer {
   }
   /* all products */
   #all-products-container .a-product-wrap .a-product {
-    width: calc(25% - 0.6px);
+    width: 25%;
   }
   #all-products-container .a-product-wrap .a-product:nth-child(2n) {
     border-right: 1px solid #000;
